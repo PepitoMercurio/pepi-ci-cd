@@ -1,8 +1,9 @@
-import { displayUserName } from ".";
+import { displayUserName } from "./index";
+import { User } from "../interfaces/";
 
 describe("displayUserName", () => {
   it("should return the full name of the user", () => {
-    const user = { firstName: "John", lastName: "Doe" };
+    const user: User = { firstName: "John", lastName: "Doe" };
     const result = displayUserName(user);
     expect(result).toBe("John Doe");
   });
